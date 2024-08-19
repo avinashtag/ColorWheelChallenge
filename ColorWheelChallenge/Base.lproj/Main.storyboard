@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mxv-vO-pMq">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22690"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorWheelCell" rowHeight="355" id="1JA-ZY-Fct">
-                                <rect key="frame" x="0.0" y="50" width="393" height="355"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorWheelCell" id="1JA-ZY-Fct" customClass="ColorWheelCell" customModule="ColorWheelChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="393.33334350585938"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1JA-ZY-Fct" id="hpZ-Gw-V76">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="355"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="393.33334350585938"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-Bq-1wK" customClass="ColorWheel" customModule="ColorWheelPicker" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="16" width="361" height="323"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-Bq-1wK" customClass="ColorWheel" customModule="ColorWheelChallenge" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="16" width="361" height="361.33333333333331"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <gestureRecognizers/>
                                             <constraints>
@@ -39,16 +39,19 @@
                                         <constraint firstAttribute="trailing" secondItem="KWz-Bq-1wK" secondAttribute="trailing" constant="16" id="UEK-SE-o11"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="colorWheel" destination="KWz-Bq-1wK" id="HHj-4m-20l"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SegmentCell" rowHeight="128" id="ZOs-3r-iMy" customClass="SegmentCell" customModule="ColorWheelChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="405" width="393" height="128"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SegmentCell" id="ZOs-3r-iMy" customClass="SegmentCell" customModule="ColorWheelChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="443.33334350585938" width="393" height="128.33332824707031"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZOs-3r-iMy" id="7Tn-4V-lOE">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128.33332824707031"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Baz-Qn-QK4">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="119.33333333333333"/>
                                             <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="118" id="tPa-Yj-qkw"/>
