@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mxv-vO-pMq">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22690"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home Page View Controller-->
+        <scene sceneID="zCX-cc-x71">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="Mxv-vO-pMq" customClass="HomePageViewController" customModule="ColorWheelChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SEp-kE-ydJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorWheelCell" rowHeight="355" id="1JA-ZY-Fct">
+                                <rect key="frame" x="0.0" y="50" width="393" height="355"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1JA-ZY-Fct" id="hpZ-Gw-V76">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="355"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-Bq-1wK" customClass="ColorWheel" customModule="ColorWheelPicker" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="16" width="361" height="323"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="KWz-Bq-1wK" secondAttribute="height" multiplier="1:1" id="kF6-zE-mgA"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KWz-Bq-1wK" firstAttribute="leading" secondItem="hpZ-Gw-V76" secondAttribute="leading" constant="16" id="B7F-Ta-ahu"/>
+                                        <constraint firstItem="KWz-Bq-1wK" firstAttribute="top" secondItem="hpZ-Gw-V76" secondAttribute="top" constant="16" id="P4R-uv-aWD"/>
+                                        <constraint firstAttribute="bottom" secondItem="KWz-Bq-1wK" secondAttribute="bottom" constant="16" id="T9K-fx-yco"/>
+                                        <constraint firstAttribute="trailing" secondItem="KWz-Bq-1wK" secondAttribute="trailing" constant="16" id="UEK-SE-o11"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SegmentCell" rowHeight="128" id="ZOs-3r-iMy" customClass="SegmentCell" customModule="ColorWheelChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="405" width="393" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZOs-3r-iMy" id="7Tn-4V-lOE">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Baz-Qn-QK4">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+                                            <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="118" id="tPa-Yj-qkw"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title=""/>
+                                                <segment title=""/>
+                                                <segment title=""/>
+                                            </segments>
+                                            <color key="selectedSegmentTintColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="segmentChange:" destination="ZOs-3r-iMy" eventType="valueChanged" id="GkO-L2-zw2"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Baz-Qn-QK4" secondAttribute="bottom" constant="10" id="9a3-8p-dcu"/>
+                                        <constraint firstItem="Baz-Qn-QK4" firstAttribute="leading" secondItem="7Tn-4V-lOE" secondAttribute="leading" id="hrk-Dv-F9f"/>
+                                        <constraint firstItem="Baz-Qn-QK4" firstAttribute="top" secondItem="7Tn-4V-lOE" secondAttribute="top" id="pNP-3W-YgR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Baz-Qn-QK4" secondAttribute="trailing" id="q86-KB-Dl8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="segment" destination="Baz-Qn-QK4" id="cuQ-45-YqP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mxv-vO-pMq" id="duT-e1-afc"/>
+                            <outlet property="delegate" destination="Mxv-vO-pMq" id="aig-G4-6Tq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOi-YH-AKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="802.29007633587787" y="-7.042253521126761"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
